@@ -1,6 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-
+//Auth - Module
+// bootstrap theme
+import { AuthGlobals } from "redux-auth/bootstrap-theme";
+import { EmailSignInForm } from 'redux-auth/bootstrap-theme';
 // Import Style
 import styles from './App.css';
 
@@ -53,6 +56,9 @@ export class App extends Component {
             intl={this.props.intl}
             toggleAddPost={this.toggleAddPostSection}
           />
+          <AuthGlobals />
+          {routes}
+          <EmailSignInForm />
           <div className={styles.container}>
             {this.props.children}
           </div>
